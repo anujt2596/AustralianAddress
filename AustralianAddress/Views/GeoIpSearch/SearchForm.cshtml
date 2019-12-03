@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "SearchForm";
+}
+
+<h2>Welcome to Australian tourism</h2>
+@Html.Label("Search Address")
+@Html.TextBox("SearchAddress")
+<div id="div1"></div>
+
+<input type="button" id="search" value="Get Address"/>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script type="text/javascript">
+
+    $("#search").click(function () {
+        var val = $("#SearchAddress").val();
+        var Search = new Object();  
+        Search.Key = val;  
+        $.ajax({
+            url: "https://localhost:44335/GeoIpSearch/Search",
+            type: "POST",
+            data: JSON.stringify(Search),  
+            contentType: "application/json; charset=utf-8",  
+            dataType: "json",
+            success: function (result) {
+                
+                if (result.Status == true && result.Total > 0) {
+                    $("#div1").html("");
+                    $.each(result.Result, function (key, value) {
+                        
+                        var distance = value.Distance;
+                        var city = value.City;
+                        var state = value.State;
+                        var postalcode = value.PostalCode;
+                        var strHtml = "<div>" + distance + " " + city + ", " + state + " " + postalcode + "</div>";
+                        $("#div1").append(strHtml);
+                    });
+                }
+                else {
+                    $("#div1").html("");
+                    $("#div1").html("Sorry No address found");
+                }
+               
+  }});
+});
+</script>

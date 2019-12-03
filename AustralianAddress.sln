@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29409.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AustralianAddress", "AustralianAddress\AustralianAddress.csproj", "{94925094-1839-4466-B1FB-F2ACD1600987}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AustralianAddress.Tests", "AustralianAddress.Tests\AustralianAddress.Tests.csproj", "{AE67F6EE-C1C2-43C8-A37D-A72287ED899B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94925094-1839-4466-B1FB-F2ACD1600987}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94925094-1839-4466-B1FB-F2ACD1600987}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94925094-1839-4466-B1FB-F2ACD1600987}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94925094-1839-4466-B1FB-F2ACD1600987}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE67F6EE-C1C2-43C8-A37D-A72287ED899B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE67F6EE-C1C2-43C8-A37D-A72287ED899B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE67F6EE-C1C2-43C8-A37D-A72287ED899B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE67F6EE-C1C2-43C8-A37D-A72287ED899B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0E858212-F2EE-434A-8E61-1950EA89CEDF}
+	EndGlobalSection
+EndGlobal
